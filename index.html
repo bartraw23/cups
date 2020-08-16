@@ -34,6 +34,7 @@
             margin: 20px;
             background-size: 200% 200%;
             background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
+            transition: background-position 1200ms;
         }
     </style>
 </head>
@@ -50,8 +51,10 @@
         level += 24;
         if (level <= 96) {
             this.style.backgroundPosition = "0 " + level + "%";
+            this.setAttribute('level', level);
+        } else {
+            this.style.cursor = "not-allowed";
         }
-        this.setAttribute('level', level);
         console.log(level);
     }
 
