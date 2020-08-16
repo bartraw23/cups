@@ -6,52 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filling cups</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <style>
-        h1 {
-            font-family: 'Lobster', cursive;
-            text-align: center;
-            font-size: 60px;
-            transform: rotate(-10deg);
-        }
-
-        .cup {
-            width: 200px;
-            height: 200px;
-            border-left: 3px solid black;
-            border-right: 3px solid black;
-            border-bottom: 3px solid black;
-            border-radius: 0 0 20px 20px;
-            cursor: pointer;
-            float: left;
-            margin: 20px;
-            background-size: 200% 200%;  
-            transition: background-position 1200ms;
-        }
-
-        .yellow{
-            background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
-        }
-
-        .purple{
-            background-image: linear-gradient(to top, #9c51b6 50%, transparent 50%);
-        }
-
-        .blue{
-            background-image: linear-gradient(to top, #5dadec 50%, transparent 50%);
-        }
-
-        .brown{
-            background-image: linear-gradient(to top, #A83731 50%, transparent 50%);
-        }
-
-        .red{
-            background-image: linear-gradient(to top, #ff3855 50%, transparent 50%);
-        }
-
-        .green{
-            background-image: linear-gradient(to top, #299617 50%, transparent 50%);
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -63,24 +18,6 @@
     <div class="cup green" level="0"></div>
     <div class="cup purple" level="0"></div>
 </body>
-<script>
-    let cups = document.querySelectorAll('.cup');
-
-    function cupClick(evt) {
-        let level = Number(this.getAttribute('level'));
-        level += 24;
-        if (level <= 96) {
-            this.style.backgroundPosition = "0 " + level + "%";
-            this.setAttribute('level', level);
-        } else {
-            this.style.cursor = "not-allowed";
-        }
-        console.log(level);
-    }
-
-    cups.forEach(cup => {
-        cup.addEventListener('click', cupClick);
-    })
-</script>
+<script src="script.js"></script>
 
 </html>
