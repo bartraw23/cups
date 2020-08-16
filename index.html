@@ -46,7 +46,7 @@
     let cups = document.querySelectorAll('.cup');
 
     function cupClick(evt) {
-        let level = this.getAttribute('level');
+        let level = Number(this.getAttribute('level'));
         level += 24;
         if (level <= 96) {
             this.style.backgroundPosition = "0 " + level + "%";
