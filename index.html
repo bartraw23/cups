@@ -7,14 +7,6 @@
     <title>Filling cups</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        /*
-        #FFF700 yellow
-        #299617 green
-        #5dadec blue
-        #9c51b6 purple
-        #ff3855 red
-        #A83731 brown
-        */
         h1 {
             font-family: 'Lobster', cursive;
             text-align: center;
@@ -32,16 +24,44 @@
             cursor: pointer;
             float: left;
             margin: 20px;
-            background-size: 200% 200%;
-            background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
+            background-size: 200% 200%;  
             transition: background-position 1200ms;
+        }
+
+        .yellow{
+            background-image: linear-gradient(to top, #FFF700 50%, transparent 50%);
+        }
+
+        .purple{
+            background-image: linear-gradient(to top, #9c51b6 50%, transparent 50%);
+        }
+
+        .blue{
+            background-image: linear-gradient(to top, #5dadec 50%, transparent 50%);
+        }
+
+        .brown{
+            background-image: linear-gradient(to top, #A83731 50%, transparent 50%);
+        }
+
+        .red{
+            background-image: linear-gradient(to top, #ff3855 50%, transparent 50%);
+        }
+
+        .green{
+            background-image: linear-gradient(to top, #299617 50%, transparent 50%);
         }
     </style>
 </head>
 
 <body>
     <h1>Filling cups</h1>
-    <div class="cup" level="0"></div>
+    <div class="cup yellow" level="0"></div>
+    <div class="cup red" level="0"></div>
+    <div class="cup blue" level="0"></div>
+    <div class="cup brown" level="0"></div>
+    <div class="cup green" level="0"></div>
+    <div class="cup purple" level="0"></div>
 </body>
 <script>
     let cups = document.querySelectorAll('.cup');
